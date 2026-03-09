@@ -4,8 +4,8 @@ Author URI: https://www.webbernaut.com
 Donate link: https://www.paypal.me/webbernaut
 Tags: remove meta generator, meta, meta generator, remove, generator, plugin version, plugin meta generator, wordpress meta generator, bot, hide, obfuscate, protect, protection, robots, secure, security
 Requires at least: 1.0
-Tested up to: 6.8.1
-Stable tag: 1
+Tested up to: 6.9.1
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,3 +31,6 @@ Author URI: <a href="https://www.webbernaut.com">Webbernaut</a>
 * Modified regex expression for tighter control over meta generator tags as to not spill over to other tags for edge cases.
 * Adjusted add_action from `get_header` to `template_redirect` for start of regex to accommodate new WordPress themes that are starting to get away from traditional WordPress theme structure and more javascript focused and not calling header templates in traditional ways via wp_head() i.e. TwentyTwentyFour Theme
 * Order of Action hooks for reference https://developer.wordpress.org/apis/hooks/action-reference/
+
+= 1.1.1 =
+* Slight modification to regex, adjusted greedy style regex for more precise selection

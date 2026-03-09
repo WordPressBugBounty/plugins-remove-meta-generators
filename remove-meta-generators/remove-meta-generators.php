@@ -6,14 +6,14 @@
     Author URI: https://www.webbernaut.com
     License: GPLv2 or later
     Text Domain: remove-meta-generators
-    Version: 1.1
+    Version: 1.1.1
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 // Set the version of this plugin
 if ( ! defined( 'removeMetaGenerators' ) ) {
-    define( 'removeMetaGenerators', '1.1' );
+    define( 'removeMetaGenerators', '1.1.1' );
 }
 
 class removeMetaGenerators {
@@ -24,7 +24,7 @@ class removeMetaGenerators {
     function init_removeMetaGenerators() {
         ini_set( 'output_buffering', 'on' ); // turns on output_buffering
         function remove_meta_generators( $html ) {
-            $pattern = '/<meta name(.*)"generator"[^>]*>/i';
+            $pattern = '/<meta\s+name\s*=\s*["\']generator["\'][^>]*>/i';
             $html = preg_replace( $pattern, '', $html );
             return $html;
         }
